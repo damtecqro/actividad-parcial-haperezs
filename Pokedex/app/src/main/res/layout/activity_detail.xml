@@ -30,10 +30,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
             >
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="36sp"
@@ -57,25 +58,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="center"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:gravity="center"
+                    android:gravity="right"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="top"
+                    android:text="Number"
+                    />
+
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="24sp"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"
                     android:layout_gravity="center"
+                    android:text="#"
+                    android:id="@+id/pokemon_number"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="top"
                     android:text="Types"
                     />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
-                    android:gravity="center"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"
                     android:layout_gravity="center"
                     android:text="Types"
                     android:id="@+id/pokemon_types"
@@ -87,25 +124,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="center"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="top"
                     android:text="Base Stats"
                     />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
-                    android:gravity="center"
+                    android:gravity="left"
+                    android:layout_marginLeft="12dp"
                     android:layout_gravity="center"
                     android:text="Stats"
                     android:id="@+id/pokemon_stats"
@@ -116,27 +156,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                android:gravity="center"
                 >
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="top"
                     android:text="Moves"
                     />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="24sp"
-                    android:gravity="center"
+                    android:gravity="left"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
                     android:text="Moves"
                     android:id="@+id/pokemon_moves"
                     />

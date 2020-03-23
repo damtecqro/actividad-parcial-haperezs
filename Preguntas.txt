@@ -1,0 +1,8 @@
+Hugo Arturo Pérez Soní
+A01273106
+
+¿Qué fue lo que más se te facilitó de la implementación de la vista?
+Añadir la funcionalidad. Botones, transiciones, llamada a la API
+
+¿Qué fue lo que más se te dificultó de la implementación de la vista?
+Manejar los JSON me pareció innecesariamente complicado de hacer en Kotlin

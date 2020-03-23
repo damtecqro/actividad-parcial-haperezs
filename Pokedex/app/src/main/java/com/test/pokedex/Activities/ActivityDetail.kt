@@ -38,6 +38,7 @@ class ActivityDetail : AppCompatActivity() {
         url = intent.getStringExtra("url")
 
         name = findViewById(R.id.pokemon_name)
+        number = findViewById(R.id.pokemon_number)
         types = findViewById(R.id.pokemon_types)
         stats = findViewById(R.id.pokemon_stats)
         moves = findViewById(R.id.pokemon_moves)
@@ -58,8 +59,9 @@ class ActivityDetail : AppCompatActivity() {
                 if(e == null){
                     val actionbar = supportActionBar
                     actionbar!!.title = result.get("name").toString().replace("\"","").capitalize()
-                    name.text = "#" + result.get("id").toString() + " " + result.get("name").toString().replace("\"","").capitalize()
+                    name.text = result.get("name").toString().replace("\"","").capitalize()
 
+                    number.text = "#" + result.get("id").toString()
                     types.text = getTypes(result.get("types").asJsonArray)
                     stats.text = getStats(result.get("stats").asJsonArray)
                     moves.text = getMoves(result.get("moves").asJsonArray)
