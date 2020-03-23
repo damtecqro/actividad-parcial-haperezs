@@ -1,10 +1,13 @@
 package com.test.pokedex.Adapters
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -14,6 +17,7 @@ import com.bumptech.glide.Glide
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.koushikdutta.ion.Ion
+import com.test.pokedex.Activities.ActivityDetail
 import com.test.pokedex.R
 
 class AdapterList :RecyclerView.Adapter<AdapterList.ViewHolder>() {
@@ -45,9 +49,10 @@ class AdapterList :RecyclerView.Adapter<AdapterList.ViewHolder>() {
     class ViewHolder(view:View):RecyclerView.ViewHolder(view){
         private var imagePokemon: ImageView = view.findViewById(R.id.pokemon_image)
         private var namePokemon: TextView   = view.findViewById(R.id.pokemon_name)
+        private var detail: ImageButton = view.findViewById(R.id.pokemon_image)
 
         fun bind(item:JsonObject,context: Context){
-            namePokemon.setText(item.get("name").asString)
+            namePokemon.setText(item.get("name").asString.capitalize())
 
             Ion.with(context)
                 .load(item.get("url").asString)
@@ -72,6 +77,12 @@ class AdapterList :RecyclerView.Adapter<AdapterList.ViewHolder>() {
 
                         }else{
                             imagePokemon.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.pokemon_logo_min))
+                        }
+
+                        detail.setOnClickListener{
+                            var intent: Intent = Intent(context, ActivityDetail::class.java)
+                            intent.putExtra("url", item.get("url").asString)
+                            context.startActivity(intent)
                         }
 
                     }
